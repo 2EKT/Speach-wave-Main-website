@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import CTA from "../components/CTA.astro";
+import Faq from "../components/Faq.astro";
 ---
 
 <Layout title="Pricing">
@@ -77,47 +78,8 @@ import CTA from "../components/CTA.astro";
                 </div>
             </div>
         </div>
-    </section>
-      <!-- FAQ -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-
-            <div class="cards-grid">
-                <div class="card">
-                    <h3>Can I change plans later?</h3>
-                    <p>Yes! You can upgrade or downgrade your plan at any time. Changes take effect immediately.</p>
-                </div>
-
-                <div class="card">
-                    <h3>Is there a free trial?</h3>
-                    <p>Yes, Pro plan comes with a 14-day free trial. No credit card required to start.</p>
-                </div>
-
-                <div class="card">
-                    <h3>What happens if I exceed my limit?</h3>
-                    <p>You'll be notified when reaching your limit. You can upgrade your plan or purchase additional
-                        characters.</p>
-                </div>
-
-                <div class="card">
-                    <h3>Do you offer annual billing?</h3>
-                    <p>Yes! Annual billing is available with a 20% discount. Contact us for details.</p>
-                </div>
-
-                <div class="card">
-                    <h3>Can I use generated voices commercially?</h3>
-                    <p>Commercial use is included in Pro and Enterprise plans. Free plan is for personal use only.</p>
-                </div>
-
-                <div class="card">
-                    <h3>What payment methods do you accept?</h3>
-                    <p>We accept all major credit cards, PayPal, and wire transfers for Enterprise customers.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
+   </section>
+    <Faq/>
   <CTA />
 </Layout>
 
@@ -195,4 +157,6 @@ import CTA from "../components/CTA.astro";
   font-weight: 700;
   margin-right: var(--spacing-xs);
 }
+
+
 </style>

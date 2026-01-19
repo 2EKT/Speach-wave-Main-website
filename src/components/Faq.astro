@@ -105,3 +105,135 @@
             </div>
         </div>
     </section>
+    <style>
+        /* FAQ Styles */
+.faq-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.faq-subtitle {
+  color: var(--secondary-text);
+  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-sm);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faq-subtitle a {
+  color: var(--primary-text);
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity var(--transition);
+}
+
+.faq-subtitle a:hover {
+  opacity: 0.8;
+}
+
+.faq-tabs {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+  flex-wrap: wrap;
+}
+
+.faq-tab {
+  padding: 8px 16px;
+  border: 2px solid var(--border-color);
+  border-radius: 20px;
+  background-color: transparent;
+  color: var(--secondary-text);
+  cursor: pointer;
+  font-weight: 500;
+  transition: var(--transition);
+  font-size: var(--font-size-sm);
+}
+
+.faq-tab:hover {
+  border-color: var(--primary-text);
+  color: var(--primary-text);
+}
+
+.faq-tab.active {
+  background-color: var(--primary-text);
+  color: var(--primary-bg);
+  border-color: var(--primary-text);
+}
+
+.faq-accordion {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--spacing-lg) var(--spacing-md);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: var(--transition);
+  gap: var(--spacing-md);
+}
+
+.faq-question:hover {
+  background-color: var(--card-shadow);
+}
+
+.faq-icon {
+  font-size: var(--font-size-lg);
+  flex-shrink: 0;
+}
+
+.faq-text {
+  flex-grow: 1;
+  font-weight: 600;
+  color: var(--primary-text);
+}
+
+.faq-arrow {
+  font-size: var(--font-size-sm);
+  color: var(--secondary-text);
+  flex-shrink: 0;
+  transition: transform var(--transition);
+}
+
+.faq-item.active .faq-arrow {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition);
+  padding: 0 var(--spacing-md);
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  padding: 0 var(--spacing-md) var(--spacing-lg) var(--spacing-md);
+}
+
+.faq-answer p {
+  color: var(--secondary-text);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  margin: 0;
+}
+    </style>
+   <script type="module" src="/scripts/Faq.js"></script> 

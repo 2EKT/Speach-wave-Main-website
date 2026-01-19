@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import CTA from "../components/CTA.astro";
+import Faq from "../components/Faq.astro";
 ---
 
 <Layout title="Contact Us">
@@ -18,7 +19,7 @@ import CTA from "../components/CTA.astro";
   <section class="section">
     <div class="container">
       <span id="status"></span>
-      <form class="contact-form" id="contactForm"  >
+      <form class="contact-form" id="contactForm">
         <div class="form-group">
           <label for="name">Name *</label>
           <input
@@ -61,10 +62,9 @@ import CTA from "../components/CTA.astro";
             placeholder="Tell us more about your inquiry..."></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary" style="width: 100%;"
-          >Send Message</button
-        >
-
+       <div  class="form-group" style="text-align: center;">
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+       </div>
         <div
           id="formResponse"
           style="margin-top: 1rem; text-align: center; display: none;"
@@ -123,64 +123,9 @@ import CTA from "../components/CTA.astro";
       </div>
     </div>
   </section>
-  <!-- Office Info -->
-  <section class="section">
-    <div class="container">
-      <div style="max-width: 700px; margin: 0 auto; text-align: center;">
-        <h2 class="section-title">Our Office</h2>
-        <p
-          style="color: var(--secondary-text); font-size: 1.125rem; line-height: 1.8;"
-        >
-          SpeechWave Technologies Inc.<br />
-          123 Innovation Drive<br />
-          San Francisco, CA 94107<br />
-          United States
-        </p>
-      </div>
-    </div>
-  </section>
 
   <!-- FAQ Section -->
-  <section class="section" style="background-color: #fafafa;">
-    <div class="container">
-      <h2 class="section-title">Quick Answers</h2>
-      <p class="section-subtitle">Common questions we receive</p>
-
-      <div class="cards-grid">
-        <div class="card">
-          <h3>What's your response time?</h3>
-          <p>
-            Support inquiries are typically answered within 24 hours. Sales
-            inquiries within 12 hours on business days.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Do you offer phone support?</h3>
-          <p>
-            Phone support is available for Enterprise customers. Pro users can
-            access priority email support.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Can I schedule a demo?</h3>
-          <p>
-            Yes! Enterprise customers can schedule a personalized demo. Contact
-            our sales team to arrange one.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Where can I find documentation?</h3>
-          <p>
-            Our comprehensive documentation and API reference are available in
-            the Resources section of our footer.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <Faq/>
   <CTA />
 </Layout>
 <script type="module" src="/scripts/contact.js"></script>
