@@ -1,239 +1,278 @@
-    <!-- FAQ -->
-    <section class="section">
-        <div class="container">
-            <div class="faq-header">
-                <h2 class="section-title">Frequently asked questions</h2>
-                <p class="faq-subtitle">These are the most commonly asked questions about SpeechWave. Can't find what you're looking for? <a href="contact.astro">Chat to our friendly team!</a></p>
-            </div>
+---
+import { Icon } from 'astro-icon/components'
 
-            <div class="faq-tabs">
-                <button class="faq-tab active" data-category="pricing">Pricing</button>
-                <button class="faq-tab" data-category="general">General</button>
-                <button class="faq-tab" data-category="billing">Billing</button>
-                <button class="faq-tab" data-category="support">Support</button>
-            </div>
 
-            <div class="faq-accordion">
-                <!-- Pricing FAQs -->
-                <div class="faq-item" data-category="pricing">
-                    <button class="faq-question">
-                        <span class="faq-icon">💳</span>
-                        <span class="faq-text">Can I change plans later?</span>
-                        <span class="faq-arrow">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes! You can upgrade or downgrade your plan at any time. Changes take effect immediately.</p>
-                    </div>
-                </div>
+---
 
-                <div class="faq-item" data-category="pricing">
-                    <button class="faq-question">
-                        <span class="faq-icon">🎁</span>
-                        <span class="faq-text">Is there a free trial?</span>
-                        <span class="faq-arrow">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes, Pro plan comes with a 14-day free trial. No credit card required to start.</p>
-                    </div>
-                </div>
+<!-- FAQ -->
+<section class="section">
+  <div class="container">
+    <div class="faq-header">
+      <h2 class="section-title">Frequently asked questions</h2>
+      <p class="faq-subtitle">
+        These are the most commonly asked questions about SpeechWave. Can't find
+        what you're looking for? <a href="contact.astro"
+          >Chat to our friendly team!</a>
+      </p>
+    </div>
+    <div class="faq-content">
+        
+    <!-- <div class="faq-tabs" >
+      <button class="faq-tab active" data-category="pricing">Pricing</button>
+      <button class="faq-tab" data-category="general">General</button>
+      <button class="faq-tab" data-category="billing">Billing</button>
+      <button class="faq-tab" data-category="support">Support</button>
+    </div> -->
 
-                <div class="faq-item" data-category="pricing">
-                    <button class="faq-question">
-                        <span class="faq-icon">⚠️</span>
-                        <span class="faq-text">What happens if I exceed my limit?</span>
-                        <span class="faq-arrow">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>You'll be notified when reaching your limit. You can upgrade your plan or purchase additional characters.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item" data-category="billing">
-                    <button class="faq-question">
-                        <span class="faq-icon">📅</span>
-                        <span class="faq-text">Do you offer annual billing?</span>
-                        <span class="faq-arrow">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes! Annual billing is available with a 20% discount. Contact us for details.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item" data-category="general">
-                    <button class="faq-question">
-                        <span class="faq-icon">🎵</span>
-                        <span class="faq-text">Can I use generated voices commercially?</span>
-                        <span class="faq-arrow">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Commercial use is included in Pro and Enterprise plans. Free plan is for personal use only.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item" data-category="billing">
-                    <button class="faq-question">
-                        <span class="faq-icon">💳</span>
-                        <span class="faq-text">What payment methods do you accept?</span>
-                        <span class="faq-arrow">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>We accept all major credit cards, PayPal, and wire transfers for Enterprise customers.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item" data-category="support">
-                    <button class="faq-question">
-                        <span class="faq-icon">📞</span>
-                        <span class="faq-text">How does support work?</span>
-                        <span class="faq-arrow">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>We offer email support for all plans, with priority support included in Pro and Enterprise plans.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item" data-category="support">
-                    <button class="faq-question">
-                        <span class="faq-icon">📚</span>
-                        <span class="faq-text">Do you provide tutorials?</span>
-                        <span class="faq-arrow">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes! We provide comprehensive documentation, video tutorials, and API guides for all users.</p>
-                    </div>
-                </div>
-            </div>
+    <!-- <div class="faq-accordion">
+     
+      <div class="faq-item" data-category="pricing">
+        <button class="faq-question">
+          <span class="faq-icon"
+            ><Icon name="mdi:arrow-right-circle" /></span
+          >
+          <span class="faq-text">Can I change plans later?</span>
+          <span class="faq-arrow"><Icon name="mdi:chevron-down" /></span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Yes! You can upgrade or downgrade your plan at any time. Changes
+            take effect immediately.
+          </p>
         </div>
-    </section>
-    <style>
-        /* FAQ Styles */
-.faq-header {
-  text-align: center;
-  margin-bottom: var(--spacing-xl);
-}
+      </div>
 
-.faq-subtitle {
-  color: var(--secondary-text);
-  font-size: var(--font-size-sm);
-  margin-top: var(--spacing-sm);
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
+      <div class="faq-item" data-category="pricing">
+        <button class="faq-question">
+          <span class="faq-icon"><Icon name="mdi:arrow-right-circle" /></span>
+          <span class="faq-text">Is there a free trial?</span>
+          <span class="faq-arrow"><Icon name="mdi:chevron-down" /></span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Yes, Pro plan comes with a 14-day free trial. No credit card
+            required to start.
+          </p>
+        </div>
+      </div>
 
-.faq-subtitle a {
-  color: var(--primary-text);
-  text-decoration: none;
-  font-weight: 600;
-  transition: opacity var(--transition);
-}
+      <div class="faq-item" data-category="pricing">
+        <button class="faq-question">
+          <span class="faq-icon"><Icon name="mdi:arrow-right-circle" /></span>
+          <span class="faq-text">What happens if I exceed my limit?</span>
+          <span class="faq-arrow"><Icon name="mdi:chevron-down" /></span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            You'll be notified when reaching your limit. You can upgrade your
+            plan or purchase additional characters.
+          </p>
+        </div>
+      </div>
 
-.faq-subtitle a:hover {
-  opacity: 0.8;
-}
+      <div class="faq-item" data-category="billing">
+        <button class="faq-question">
+          <span class="faq-icon"><Icon name="mdi:arrow-right-circle" /></span>
+          <span class="faq-text">Do you offer annual billing?</span>
+          <span class="faq-arrow"><Icon name="mdi:chevron-down" /></span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Yes! Annual billing is available with a 20% discount. Contact us for
+            details.
+          </p>
+        </div>
+      </div>
 
-.faq-tabs {
-  display: flex;
-  justify-content: center;
-  gap: var(--spacing-md);
-  margin-bottom: var(--spacing-xl);
-  flex-wrap: wrap;
-}
+      <div class="faq-item" data-category="general">
+        <button class="faq-question">
+          <span class="faq-icon"><Icon name="mdi:arrow-right-circle" /></span>
+          <span class="faq-text">Can I use generated voices commercially?</span>
+          <span class="faq-arrow"><Icon name="mdi:chevron-down" /></span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Commercial use is included in Pro and Enterprise plans. Free plan is
+            for personal use only.
+          </p>
+        </div>
+      </div>
 
-.faq-tab {
-  padding: 8px 16px;
-  border: 2px solid var(--border-color);
-  border-radius: 20px;
-  background-color: transparent;
-  color: var(--secondary-text);
-  cursor: pointer;
-  font-weight: 500;
-  transition: var(--transition);
-  font-size: var(--font-size-sm);
-}
+      <div class="faq-item" data-category="billing">
+        <button class="faq-question">
+          <span class="faq-icon"><Icon name="mdi:arrow-right-circle" /></span>
+          <span class="faq-text">What payment methods do you accept?</span>
+          <span class="faq-arrow"><Icon name="mdi:chevron-down" /></span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            We accept all major credit cards, PayPal, and wire transfers for
+            Enterprise customers.
+          </p>
+        </div>
+      </div>
 
-.faq-tab:hover {
-  border-color: var(--primary-text);
-  color: var(--primary-text);
-}
+      <div class="faq-item" data-category="support">
+        <button class="faq-question">
+          <span class="faq-icon"><Icon name="mdi:arrow-right-circle" /></span>
+          <span class="faq-text">How does support work?</span>
+          <span class="faq-arrow"><Icon name="mdi:chevron-down" /></span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            We offer email support for all plans, with priority support included
+            in Pro and Enterprise plans.
+          </p>
+        </div>
+      </div>
 
-.faq-tab.active {
-  background-color: var(--primary-text);
-  color: var(--primary-bg);
-  border-color: var(--primary-text);
-}
+      <div class="faq-item" data-category="support">
+        <button class="faq-question">
+          <span class="faq-icon"><Icon name="mdi:arrow-right-circle" /></span>
+          <span class="faq-text">Do you provide tutorials?</span>
+          <span class="faq-arrow"><Icon name="mdi:chevron-down" /></span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Yes! We provide comprehensive documentation, video tutorials, and
+            API guides for all users.
+          </p>
+        </div>
+      </div>
+    </div> -->
+    </div>
+  </div>
+</section>
+<style is:global>
+  /* FAQ Styles */
+  .faq-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+  }
 
-.faq-accordion {
-  max-width: 700px;
-  margin: 0 auto;
-}
+  .faq-subtitle {
+    color: var(--secondary-text);
+    font-size: var(--font-size-sm);
+    margin-top: var(--spacing-sm);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-.faq-item {
-  border-bottom: 1px solid var(--border-color);
-  margin-bottom: var(--spacing-sm);
-}
+  .faq-subtitle a {
+    color: var(--primary-text);
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity var(--transition);
+  }
 
-.faq-item:last-child {
-  border-bottom: none;
-}
+  .faq-subtitle a:hover {
+    opacity: 0.8;
+  }
 
-.faq-question {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: var(--spacing-lg) var(--spacing-md);
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  text-align: left;
-  transition: var(--transition);
-  gap: var(--spacing-md);
-}
+  .faq-tabs {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+    flex-wrap: wrap;
+  }
 
-.faq-question:hover {
-  background-color: var(--card-shadow);
-}
+  .faq-tab {
+    padding: 8px 16px;
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    background-color: transparent;
+    color: var(--secondary-text);
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transition);
+    font-size: var(--font-size-sm);
+  }
 
-.faq-icon {
-  font-size: var(--font-size-lg);
-  flex-shrink: 0;
-}
+  .faq-tab:hover {
+    border-color: var(--primary-text);
+    color: var(--primary-text);
+  }
 
-.faq-text {
-  flex-grow: 1;
-  font-weight: 600;
-  color: var(--primary-text);
-}
+  .faq-tab.active {
+    background-color: var(--primary-text);
+    color: var(--primary-bg);
+    border-color: var(--primary-text);
+  }
 
-.faq-arrow {
-  font-size: var(--font-size-sm);
-  color: var(--secondary-text);
-  flex-shrink: 0;
-  transition: transform var(--transition);
-}
+  .faq-accordion {
+    max-width: 700px;
+    margin: 0 auto;
+  }
 
-.faq-item.active .faq-arrow {
-  transform: rotate(180deg);
-}
+  .faq-item {
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: var(--spacing-sm);
+  }
 
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height var(--transition);
-  padding: 0 var(--spacing-md);
-}
+  .faq-item:last-child {
+    border-bottom: none;
+  }
 
-.faq-item.active .faq-answer {
-  max-height: 500px;
-  padding: 0 var(--spacing-md) var(--spacing-lg) var(--spacing-md);
-}
+  .faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: var(--spacing-lg) var(--spacing-md);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: var(--transition);
+    gap: var(--spacing-md);
+  }
 
-.faq-answer p {
-  color: var(--secondary-text);
-  font-size: var(--font-size-sm);
-  line-height: 1.6;
-  margin: 0;
-}
-    </style>
-   <script type="module" src="/scripts/Faq.js"></script> 
+  .faq-question:hover {
+    background-color: var(--card-shadow);
+  }
+
+  .faq-icon {
+    font-size: var(--font-size-lg);
+    flex-shrink: 0;
+  }
+
+  .faq-text {
+    flex-grow: 1;
+    font-weight: 600;
+    color: var(--primary-text);
+  }
+
+  .faq-arrow {
+    font-size: var(--font-size-sm);
+    color: var(--secondary-text);
+    flex-shrink: 0;
+    transition: transform var(--transition);
+  }
+
+  .faq-item.active .faq-arrow {
+    transform: rotate(180deg);
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition);
+    padding: 0 var(--spacing-md);
+  }
+
+  .faq-item.active .faq-answer {
+    max-height: 500px;
+    padding: 0 var(--spacing-md) var(--spacing-lg) var(--spacing-md);
+  }
+
+  .faq-answer p {
+    color: var(--secondary-text);
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+    margin: 0;
+  }
+</style>
+<script type="module" src="/scripts/Faq.js"></script>
+

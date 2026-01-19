@@ -10,9 +10,12 @@
   },
   "dependencies": {
     "@astrojs/node": "^9.5.2",
-    "@fortawesome/fontawesome-svg-core": "^7.1.0",
+    "@iconify-json/mdi": "^1.2.3",
+    "@iconify/utils": "^3.1.0",
     "appwrite": "^21.5.0",
-    "astro": "^5.16.9",
-    "astro-fontawesome-repo": "github:luluvia/astro-fontawesome"
+    "astro": "^5.16.9"
+  },
+  "devDependencies": {
+    "astro-icon": "^1.1.5"
   }
 }
