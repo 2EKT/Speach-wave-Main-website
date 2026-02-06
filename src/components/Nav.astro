@@ -1,10 +1,15 @@
 ---
+import { Image } from 'astro:assets';
+// import logo from "src/assets/images/speech_wave.png";
+import Speech_wave from '../assets/image/speach_wave.png';
 const pathname = Astro.url.pathname;
 ---
 
 <nav class="navbar">
   <div class="container">
-    <a href="/" class="logo">SpeechWave</a>
+    <a href="/" class="logo" style="display: flex; align-items: center; gap: 10px;"> 
+      <Image src={Speech_wave} alt="SpeechWave Logo" width="80" height="80" class="logoimg"/>
+      <span>SpeechWave</span> </a>
     <button class="mobile-menu-toggle" aria-label="Toggle menu">
       <span></span>
       <span></span>
@@ -108,5 +113,8 @@ const pathname = Astro.url.pathname;
     height: 2px;
     background-color: var(--primary-text);
     transition: var(--transition);
+  }
+  .logoimg{
+  filter: invert(100%);
   }
 </style>
